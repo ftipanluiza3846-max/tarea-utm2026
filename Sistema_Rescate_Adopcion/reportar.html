@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Rescate - Sistema de Rescate</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Registro de Animales Rescatados</h1>
+        <p>Sistema de Control de Rescate y Adopción</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar Rescate</a></li>
+            <li><a href="rescates.html">Casos Registrados</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Formulario de nuevo rescate</h2>
+
+            <p>
+                Complete la información del animal encontrado.
+                Todos los campos son obligatorios.
+            </p>
+
+            <form action="reportar.html" method="get">
+
+                <p>
+                    <label for="nombre">
+                        Nombre provisional o título del caso:
+                    </label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        minlength="3"
+                        maxlength="100"
+                        required>
+                </p>
+
+                <p>
+                    <label for="categoria">
+                        Categoría del animal:
+                    </label>
+                    <select id="categoria"
+                            name="categoria"
+                            required>
+                        <option value="">
+                            Seleccione una categoría
+                        </option>
+                        <option value="perro">Perros</option>
+                        <option value="gato">Gatos</option>
+                        <option value="fauna">
+                            Fauna Silvestre
+                        </option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Nivel de urgencia médica:</legend>
+
+                    <p>
+                        <input type="radio"
+                               id="alta"
+                               name="urgencia"
+                               value="alta"
+                               required>
+                        <label for="alta">Alta</label>
+                    </p>
+
+                    <p>
+                        <input type="radio"
+                               id="media"
+                               name="urgencia"
+                               value="media">
+                        <label for="media">Media</label>
+                    </p>
+
+                    <p>
+                        <input type="radio"
+                               id="baja"
+                               name="urgencia"
+                               value="baja">
+                        <label for="baja">Baja</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label for="descripcion">
+                        Descripción del estado del animal:
+                    </label>
+                </p>
+
+                <p>
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        rows="6"
+                        cols="50"
+                        minlength="10"
+                        maxlength="1000"
+                        placeholder="Describa dónde y cómo fue encontrado el animal..."
+                        required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">
+                        Validar y enviar formulario
+                    </button>
+
+                    <button type="reset">
+                        Limpiar formulario
+                    </button>
+                </p>
+
+            </form>
+
+        </section>
+
+        <section>
+            <h2>Información importante</h2>
+
+            <article>
+                <h3>Atención de emergencias</h3>
+                <p>
+                    Los animales que presenten heridas graves
+                    deben recibir atención veterinaria prioritaria.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Universidad Técnica de Manabí</p>
+        <p>Proyecto académico - Desarrollo de Sistemas Informáticos</p>
+        <p>2026 - Sistema de Rescate y Adopción</p>
+    </footer>
+
+</body>
+</html>
